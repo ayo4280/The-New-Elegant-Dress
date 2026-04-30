@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,13 +9,109 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        "on-secondary-fixed": "#241a00",
+        "surface-tint": "#366847",
+        "on-surface-variant": "#414942",
+        "surface": "#fbf9f3",
+        "error": "#ba1a1a",
+        "outline": "#717971",
+        "secondary-container": "#fed977",
+        "surface-container-high": "#eae8e2",
+        "surface-container-low": "#f5f3ee",
+        "on-secondary-container": "#785d00",
+        "on-secondary": "#ffffff",
+        "inverse-surface": "#30312d",
+        "surface-container-lowest": "#ffffff",
+        "on-error-container": "#93000a",
+        "tertiary-fixed-dim": "#c3c8c3",
+        "surface-variant": "#e4e2dd",
+        "secondary-fixed-dim": "#e6c364",
+        "on-error": "#ffffff",
+        "tertiary-container": "#404542",
+        "on-tertiary-container": "#aeb2ae",
+        "primary-fixed-dim": "#9dd3aa",
+        "on-primary-container": "#88bd95",
+        "on-tertiary": "#ffffff",
+        "outline-variant": "#c1c9bf",
+        "primary-fixed": "#b8f0c5",
+        "secondary-fixed": "#ffe08f",
+        "primary-container": "#1a4d2e",
+        "inverse-on-surface": "#f2f1eb",
+        "on-background": "#1b1c19",
+        "tertiary-fixed": "#dfe4df",
+        "error-container": "#ffdad6",
+        "primary": "#00361a",
+        "surface-container": "#f0eee8",
+        "on-primary-fixed": "#00210e",
+        "on-secondary-fixed-variant": "#584400",
+        "on-tertiary-fixed": "#181d1a",
+        "on-primary": "#ffffff",
+        "tertiary": "#2a2f2c",
+        "inverse-primary": "#9dd3aa",
+        "surface-container-highest": "#e4e2dd",
+        "on-primary-fixed-variant": "#1d5031",
+        "surface-bright": "#fbf9f3",
+        "on-surface": "#1b1c19",
+        "background": "#fbf9f3",
+        "secondary": "#755b00",
+        "surface-dim": "#dcdad4",
+        "on-tertiary-fixed-variant": "#434844",
+        "gradient-1-start": "#007CF0",
+        "gradient-1-end": "#00DFD8",
+        "gradient-2-start": "#7928CA",
+        "gradient-2-end": "#FF0080",
+        "gradient-3-start": "#FF4D4D",
+        "gradient-3-end": "#F9CB28",
+      },
+      borderRadius: {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      fontFamily: {
+        "headline": ["var(--font-noto-serif)", "serif"],
+        "body": ["var(--font-inter)", "sans-serif"],
+        "label": ["var(--font-inter)", "sans-serif"]
+      },
+      keyframes: {
+        "gradient-foreground-1": {
+          "0%, 16.667%, 100%": { opacity: "1" },
+          "33.333%, 83.333%": { opacity: "0" },
+        },
+        "gradient-background-1": {
+          "0%, 16.667%, 100%": { opacity: "0" },
+          "25%, 91.667%": { opacity: "1" },
+        },
+        "gradient-foreground-2": {
+          "0%, 16.667%, 66.667%, 100%": { opacity: "0" },
+          "33.333%, 50%": { opacity: "1" },
+        },
+        "gradient-background-2": {
+          "0%, 16.667%, 66.667%, 100%": { opacity: "1" },
+          "25%, 58.333%": { opacity: "0" },
+        },
+        "gradient-foreground-3": {
+          "0%, 50%, 100%": { opacity: "0" },
+          "66.667%, 83.333%": { opacity: "1" },
+        },
+        "gradient-background-3": {
+          "0%, 58.333%, 91.667%, 100%": { opacity: "1" },
+          "66.667%, 83.333%": { opacity: "0" },
+        },
+      },
+      animation: {
+        "gradient-background-1": "gradient-background-1 8s infinite",
+        "gradient-foreground-1": "gradient-foreground-1 8s infinite",
+        "gradient-background-2": "gradient-background-2 8s infinite",
+        "gradient-foreground-2": "gradient-foreground-2 8s infinite",
+        "gradient-background-3": "gradient-background-3 8s infinite",
+        "gradient-foreground-3": "gradient-foreground-3 8s infinite",
       },
     },
   },
   plugins: [],
 };
+
 export default config;

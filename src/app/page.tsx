@@ -1,113 +1,197 @@
 import Image from "next/image";
+import Link from "next/link";
+
+import { SparklesCore } from "@/components/SparklesCore";
+import { TextColor } from "@/components/TextColor";
+import { TextEffect } from "@/components/TextEffect";
+import { RevealText } from "@/components/RevealText";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <>
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <SparklesCore
+          id="landing-sparkles"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={80}
+          className="w-full h-full"
+          particleColor="#C9A84C"
         />
       </div>
+      {/* Hero Section */}
+      <section className="relative min-h-[795px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          {/* We will use regular img tag since Image requires host configuration for Next.js when using external images, 
+              but since we have the original design urls, we'll configure it or use img. Using img for now to be safe with external URLs without config. */}
+          <img 
+            alt="A man in a sharp bespoke forest green suit" 
+            className="w-full h-full object-cover grayscale-[0.2] opacity-60" 
+            src="/images/hero-v2.png"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent backdrop-blur-[2px]"></div>
+        </div>
+        <div className="relative z-10 w-full max-w-screen-2xl mx-auto px-6 md:px-12 py-24">
+          <div className="max-w-4xl">
+            <TextColor />
+            <TextEffect 
+              preset="blur"
+              loop={true}
+              className="font-body text-xl md:text-2xl text-white/90 mb-12 max-w-xl leading-relaxed"
+            >
+              Luxury tailoring inspired by nature, delivered to your door.
+            </TextEffect>
+            <div className="flex flex-wrap gap-6">
+              <Link href="/collection" className="px-10 py-5 bg-primary border-2 border-secondary text-white font-semibold tracking-wide flex items-center gap-3 hover:bg-primary-container transition-all shadow-xl">
+                <RevealText 
+                  text="Explore Collection" 
+                  fontSize="text-lg" 
+                  textColor="text-white" 
+                  overlayColor="text-[#C9A84C]" 
+                />
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Value Propositions */}
+      <section className="py-24 bg-surface/40 backdrop-blur-md border-y border-white/5">
+        <div className="max-w-screen-2xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant/20 pt-16">
+            <div className="space-y-4">
+              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Legacy</span>
+              <h3 className="font-headline text-3xl text-primary">Nigerian Craftsmanship</h3>
+              <p className="text-on-surface-variant leading-relaxed font-body">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
+            </div>
+            <div className="space-y-4">
+              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Precision</span>
+              <h3 className="font-headline text-3xl text-primary">Bespoke Fit</h3>
+              <p className="text-on-surface-variant leading-relaxed font-body">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
+            </div>
+            <div className="space-y-4">
+              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Experience</span>
+              <h3 className="font-headline text-3xl text-primary">Convenience Redefined</h3>
+              <p className="text-on-surface-variant leading-relaxed font-body">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Editorial Feature Section (Bento Inspired) */}
+      <section className="py-24 bg-surface-container-low/30 backdrop-blur-xl">
+        <div className="max-w-screen-2xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+            <div className="max-w-xl">
+              <h2 className="font-headline text-4xl md:text-5xl text-secondary mb-6">Featured Looks</h2>
+              <p className="text-surface/80 font-body">Our seasonal curation focuses on the 'Forest Estate' aesthetic—deep earth tones and organic textures for the discerning leader.</p>
+            </div>
+            <Link href="/collection" className="font-label text-secondary font-semibold border-b-2 border-secondary pb-1 hover:text-surface transition-colors">
+              View Entire Lookbook
+            </Link>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+            {/* Left Column - Large Features */}
+            <div className="md:col-span-8 flex flex-col gap-8">
+              {/* Card 1 */}
+              <div className="flex-1 group overflow-hidden bg-surface-container-lowest relative">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    alt="A diverse group of business professionals posing for a career campaign" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    src="/images/diverse-business-people-full-body-portrait-jobs-career-campaign.jpg"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <span className="font-label text-xs tracking-widest text-secondary font-bold uppercase mb-2 block">Edition 01</span>
+                      <h4 className="font-headline text-2xl text-primary mb-2">The Charcoal Estate Overcoat</h4>
+                      <p className="text-on-surface-variant font-body">Hand-finished double-breasted wool cashmere blend.</p>
+                    </div>
+                    <span className="font-headline text-xl text-secondary">₦2,775,000</span>
+                  </div>
+                </div>
+              </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+              {/* Card 4 (New) */}
+              <div className="flex-1 group overflow-hidden bg-surface-container-lowest relative">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img 
+                    alt="A perfectly tailored charcoal suit displayed on a mannequin" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    src="/images/charcoal-suit.png"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <span className="font-label text-xs tracking-widest text-secondary font-bold uppercase mb-2 block">Edition 02</span>
+                      <h4 className="font-headline text-2xl text-primary mb-2">The Executive Charcoal Suit</h4>
+                      <p className="text-on-surface-variant font-body">Italian wool-silk blend with a natural stretch for all-day comfort.</p>
+                    </div>
+                    <span className="font-headline text-xl text-secondary">₦1,850,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+            {/* Vertical Side Cards */}
+            <div className="md:col-span-4 flex flex-col gap-8">
+              <div className="flex-1 group bg-surface-container-lowest overflow-hidden">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img 
+                    alt="A businessman and his partner working in a modern office" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    src="/images/businessman-with-his-partner-working-office.jpg"
+                  />
+                </div>
+                <div className="p-6">
+                  <h4 className="font-headline text-xl text-primary">Savannah Chinos</h4>
+                  <p className="text-secondary font-semibold mt-1">₦480,000</p>
+                </div>
+              </div>
+
+              <div className="flex-1 group bg-surface-container-lowest overflow-hidden">
+                <div className="aspect-[4/5] overflow-hidden">
+                  <img 
+                    alt="Elegant Green Gown" 
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                    src="/images/green-gown.png"
+                  />
+                </div>
+                <div className="p-6">
+                  <h4 className="font-headline text-xl text-primary">The Heritage Shirt</h4>
+                  <p className="text-secondary font-semibold mt-1">₦315,000</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Signature Quote / Narrative Section */}
+      <section className="py-32 bg-primary-container/40 backdrop-blur-2xl text-white relative overflow-hidden">
+        <div className="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none">
+          <span className="material-symbols-outlined text-[40rem] translate-x-1/2 -translate-y-1/4" style={{ fontVariationSettings: "'FILL' 1" }}>
+            content_cut
+          </span>
+        </div>
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <span className="material-symbols-outlined text-secondary text-5xl mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>
+            format_quote
+          </span>
+          <blockquote className="font-headline text-3xl md:text-5xl italic leading-tight mb-12">
+            "True luxury is not just in the fabric, but in the silence of a perfect fit. It is the confidence to walk into any room and feel as though you belong to the earth beneath you."
+          </blockquote>
+          <cite className="font-label tracking-widest uppercase text-sm font-bold text-secondary-fixed">
+            Obi Ndubisi, Master Tailor
+          </cite>
+        </div>
+      </section>
+    </>
   );
 }
