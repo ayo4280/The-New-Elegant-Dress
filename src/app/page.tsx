@@ -86,7 +86,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-xl">
               <h2 className="font-headline text-4xl md:text-5xl text-secondary mb-6">Featured Looks</h2>
-              <p className="text-surface/80 font-body">Our seasonal curation focuses on the 'Forest Estate' aesthetic—deep earth tones and organic textures for the discerning leader.</p>
+              <p className="text-surface/80 font-body">Our seasonal curation focuses on the &apos;Forest Estate&apos; aesthetic—deep earth tones and organic textures for the discerning leader.</p>
             </div>
             <Link href="/collection" className="font-label text-secondary font-semibold border-b-2 border-secondary pb-1 hover:text-surface transition-colors">
               View Entire Lookbook
@@ -97,7 +97,7 @@ export default function Home() {
             {/* Left Column - Large Features */}
             <div className="md:col-span-8 flex flex-col gap-8">
               {/* Card 1 */}
-              <div className="flex-1 group overflow-hidden bg-surface-container-lowest relative">
+              <div className="group overflow-hidden bg-surface-container-lowest relative">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     alt="A diverse group of business professionals posing for a career campaign" 
@@ -118,7 +118,7 @@ export default function Home() {
               </div>
 
               {/* Card 4 (New) */}
-              <div className="flex-1 group overflow-hidden bg-surface-container-lowest relative">
+              <div className="group overflow-hidden bg-surface-container-lowest relative">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
                     alt="A perfectly tailored charcoal suit displayed on a mannequin" 
@@ -141,7 +141,7 @@ export default function Home() {
 
             {/* Vertical Side Cards */}
             <div className="md:col-span-4 flex flex-col gap-8">
-              <div className="flex-1 group bg-surface-container-lowest overflow-hidden">
+              <div className="group bg-surface-container-lowest overflow-hidden">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img 
                     alt="A businessman and his partner working in a modern office" 
@@ -155,7 +155,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex-1 group bg-surface-container-lowest overflow-hidden">
+              <div className="group bg-surface-container-lowest overflow-hidden">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img 
                     alt="Elegant Green Gown" 
@@ -185,7 +185,7 @@ export default function Home() {
             format_quote
           </span>
           <blockquote className="font-headline text-3xl md:text-5xl italic leading-tight mb-12">
-            "True luxury is not just in the fabric, but in the silence of a perfect fit. It is the confidence to walk into any room and feel as though you belong to the earth beneath you."
+            &quot;True luxury is not just in the fabric, but in the silence of a perfect fit. It is the confidence to walk into any room and feel as though you belong to the earth beneath you.&quot;
           </blockquote>
           <cite className="font-label tracking-widest uppercase text-sm font-bold text-secondary-fixed">
             Obi Ndubisi, Master Tailor
