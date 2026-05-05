@@ -44,10 +44,10 @@ export default function Chatbot() {
       const data = await response.json();
       const aiReply = data.choices[0]?.message?.content || "I'm sorry, I couldn't process that.";
       
-      setMessages([...newMessages, { role: "assistant", content: aiReply }]);
+      setMessages([...newMessages, { role: "assistant", content: aiReply } as Message]);
     } catch (error) {
       console.error(error);
-      setMessages([...newMessages, { role: "assistant", content: "Connection error. Please try again later." }]);
+      setMessages([...newMessages, { role: "assistant", content: "Connection error. Please try again later." } as Message]);
     } finally {
       setIsLoading(false);
     }
