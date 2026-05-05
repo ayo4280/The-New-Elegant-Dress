@@ -25,8 +25,8 @@ export default function Chatbot() {
     if (e) e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const newMessages = [...messages, { role: "user", content: input.trim() }];
-    setMessages(newMessages as Message[]);
+    const newMessages: Message[] = [...messages, { role: "user", content: input.trim() } as Message];
+    setMessages(newMessages);
     setInput("");
     setIsLoading(true);
 
