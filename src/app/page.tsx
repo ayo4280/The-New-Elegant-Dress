@@ -61,19 +61,19 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant/20 pt-16">
             <div className="space-y-4">
-              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Legacy</span>
-              <h3 className="font-headline text-3xl text-primary font-bold">Nigerian Craftsmanship</h3>
-              <p className="text-on-surface leading-relaxed font-body font-medium">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
+              <span className="font-label text-secondary-fixed font-black text-sm tracking-[0.2em] uppercase">The Legacy</span>
+              <h3 className="font-headline text-3xl text-white font-bold">Nigerian Craftsmanship</h3>
+              <p className="text-white/90 leading-relaxed font-body font-medium">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
             </div>
             <div className="space-y-4">
-              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Precision</span>
-              <h3 className="font-headline text-3xl text-primary font-bold">Bespoke Fit</h3>
-              <p className="text-on-surface leading-relaxed font-body font-medium">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
+              <span className="font-label text-secondary-fixed font-black text-sm tracking-[0.2em] uppercase">The Precision</span>
+              <h3 className="font-headline text-3xl text-white font-bold">Bespoke Fit</h3>
+              <p className="text-white/90 leading-relaxed font-body font-medium">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
             </div>
             <div className="space-y-4">
-              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Experience</span>
-              <h3 className="font-headline text-3xl text-primary font-bold">Convenience Redefined</h3>
-              <p className="text-on-surface leading-relaxed font-body font-medium">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
+              <span className="font-label text-secondary-fixed font-black text-sm tracking-[0.2em] uppercase">The Experience</span>
+              <h3 className="font-headline text-3xl text-white font-bold">Convenience Redefined</h3>
+              <p className="text-white/90 leading-relaxed font-body font-medium">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
             </div>
           </div>
         </div>
@@ -84,10 +84,10 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-xl">
-              <h2 className="font-headline text-4xl md:text-5xl text-secondary mb-6">Featured Looks</h2>
-              <p className="text-on-surface/80 font-body">Our seasonal curation focuses on the &apos;Forest Estate&apos; aesthetic—deep earth tones and organic textures for the discerning leader.</p>
+              <h2 className="font-headline text-4xl md:text-5xl text-secondary-fixed mb-6">Featured Looks</h2>
+              <p className="text-white/90 font-body font-medium">Our seasonal curation focuses on the &apos;Forest Estate&apos; aesthetic—deep earth tones and organic textures for the discerning leader.</p>
             </div>
-            <Link href="/collection" className="font-label text-secondary font-semibold border-b-2 border-secondary pb-1 hover:text-surface transition-colors">
+            <Link href="/collection" className="font-label text-secondary-fixed font-semibold border-b-2 border-secondary-fixed pb-1 hover:text-white transition-colors">
               View Entire Lookbook
             </Link>
           </div>
