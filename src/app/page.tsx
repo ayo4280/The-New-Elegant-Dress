@@ -61,19 +61,19 @@ export default function Home() {
         <div className="max-w-screen-2xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-outline-variant/20 pt-16">
             <div className="space-y-4">
-              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Legacy</span>
-              <h3 className="font-headline text-3xl text-primary">Nigerian Craftsmanship</h3>
-              <p className="text-on-surface/80 leading-relaxed font-body">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
+              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Legacy</span>
+              <h3 className="font-headline text-3xl text-primary font-bold">Nigerian Craftsmanship</h3>
+              <p className="text-on-surface leading-relaxed font-body font-medium">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
             </div>
             <div className="space-y-4">
-              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Precision</span>
-              <h3 className="font-headline text-3xl text-primary">Bespoke Fit</h3>
-              <p className="text-on-surface/80 leading-relaxed font-body">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
+              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Precision</span>
+              <h3 className="font-headline text-3xl text-primary font-bold">Bespoke Fit</h3>
+              <p className="text-on-surface leading-relaxed font-body font-medium">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
             </div>
             <div className="space-y-4">
-              <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Experience</span>
-              <h3 className="font-headline text-3xl text-primary">Convenience Redefined</h3>
-              <p className="text-on-surface/80 leading-relaxed font-body">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
+              <span className="font-label text-secondary font-black text-sm tracking-[0.2em] uppercase">The Experience</span>
+              <h3 className="font-headline text-3xl text-primary font-bold">Convenience Redefined</h3>
+              <p className="text-on-surface leading-relaxed font-body font-medium">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
             </div>
           </div>
         </div>
