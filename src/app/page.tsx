@@ -5,6 +5,7 @@ import { SparklesCore } from "@/components/SparklesCore";
 import { TextColor } from "@/components/TextColor";
 import { TextEffect } from "@/components/TextEffect";
 import { RevealText } from "@/components/RevealText";
+import { QuoteCarousel } from "@/components/QuoteCarousel";
 
 export default function Home() {
   return (
@@ -23,8 +24,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[795px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          {/* We will use regular img tag since Image requires host configuration for Next.js when using external images, 
-              but since we have the original design urls, we'll configure it or use img. Using img for now to be safe with external URLs without config. */}
           <img 
             alt="A man in a sharp bespoke forest green suit" 
             className="w-full h-full object-cover grayscale-[0.2] opacity-60" 
@@ -94,9 +93,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-            {/* Left Column - Large Features */}
             <div className="md:col-span-8 flex flex-col gap-8">
-              {/* Card 1 */}
               <div className="group overflow-hidden bg-surface-container-lowest relative">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
@@ -117,7 +114,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Card 4 (New) */}
               <div className="group overflow-hidden bg-surface-container-lowest relative">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img 
@@ -139,7 +135,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Vertical Side Cards */}
             <div className="md:col-span-4 flex flex-col gap-8">
               <div className="group bg-surface-container-lowest overflow-hidden">
                 <div className="aspect-[4/5] overflow-hidden">
@@ -180,17 +175,7 @@ export default function Home() {
             content_cut
           </span>
         </div>
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <span className="material-symbols-outlined text-secondary text-5xl mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>
-            format_quote
-          </span>
-          <blockquote className="font-headline text-3xl md:text-5xl italic leading-tight mb-12">
-            &quot;True luxury is not just in the fabric, but in the silence of a perfect fit. It is the confidence to walk into any room and feel as though you belong to the earth beneath you.&quot;
-          </blockquote>
-          <cite className="font-label tracking-widest uppercase text-sm font-bold text-secondary-fixed">
-            Obi Ndubisi, Master Tailor
-          </cite>
-        </div>
+        <QuoteCarousel />
       </section>
     </>
   );
