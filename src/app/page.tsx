@@ -64,17 +64,17 @@ export default function Home() {
             <div className="space-y-4">
               <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Legacy</span>
               <h3 className="font-headline text-3xl text-primary">Nigerian Craftsmanship</h3>
-              <p className="text-on-surface-variant leading-relaxed font-body">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
+              <p className="text-on-surface/80 leading-relaxed font-body">Rooted in generations of master tailoring, our artisans blend traditional techniques with contemporary silhouettes.</p>
             </div>
             <div className="space-y-4">
               <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Precision</span>
               <h3 className="font-headline text-3xl text-primary">Bespoke Fit</h3>
-              <p className="text-on-surface-variant leading-relaxed font-body">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
+              <p className="text-on-surface/80 leading-relaxed font-body">Utilizing 3D measurement technology to ensure your garment feels like a second skin from the very first wear.</p>
             </div>
             <div className="space-y-4">
               <span className="font-label text-secondary font-bold text-sm tracking-[0.2em] uppercase">The Experience</span>
               <h3 className="font-headline text-3xl text-primary">Convenience Redefined</h3>
-              <p className="text-on-surface-variant leading-relaxed font-body">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
+              <p className="text-on-surface/80 leading-relaxed font-body">From virtual consultation to doorstep delivery, we bring the Savile Row experience to your home sanctuary.</p>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-xl">
               <h2 className="font-headline text-4xl md:text-5xl text-secondary mb-6">Featured Looks</h2>
-              <p className="text-surface/80 font-body">Our seasonal curation focuses on the &apos;Forest Estate&apos; aesthetic—deep earth tones and organic textures for the discerning leader.</p>
+              <p className="text-on-surface/80 font-body">Our seasonal curation focuses on the &apos;Forest Estate&apos; aesthetic—deep earth tones and organic textures for the discerning leader.</p>
             </div>
             <Link href="/collection" className="font-label text-secondary font-semibold border-b-2 border-secondary pb-1 hover:text-surface transition-colors">
               View Entire Lookbook
@@ -110,7 +110,7 @@ export default function Home() {
                     <div>
                       <span className="font-label text-xs tracking-widest text-secondary font-bold uppercase mb-2 block">Edition 01</span>
                       <h4 className="font-headline text-2xl text-primary mb-2">The Charcoal Estate Overcoat</h4>
-                      <p className="text-on-surface-variant font-body">Hand-finished double-breasted wool cashmere blend.</p>
+                      <p className="text-on-surface/80 font-body">Hand-finished double-breasted wool cashmere blend.</p>
                     </div>
                     <span className="font-headline text-xl text-secondary">₦2,775,000</span>
                   </div>
@@ -131,7 +131,7 @@ export default function Home() {
                     <div>
                       <span className="font-label text-xs tracking-widest text-secondary font-bold uppercase mb-2 block">Edition 02</span>
                       <h4 className="font-headline text-2xl text-primary mb-2">The Executive Charcoal Suit</h4>
-                      <p className="text-on-surface-variant font-body">Italian wool-silk blend with a natural stretch for all-day comfort.</p>
+                      <p className="text-on-surface/80 font-body">Italian wool-silk blend with a natural stretch for all-day comfort.</p>
                     </div>
                     <span className="font-headline text-xl text-secondary">₦1,850,000</span>
                   </div>
